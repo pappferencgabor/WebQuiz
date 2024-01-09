@@ -1,0 +1,91 @@
+:root {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #833ab4;
+    background: linear-gradient(#833ab4, #da1832, #fcb045);
+}
+
+.wrapper {
+    width: 95%;
+}
+
+.state {
+    text-align: right;
+    color: white;
+}
+
+.state strong {
+    font-size: 2rem;
+}
+
+.question-holder {
+    background-color: white;
+    padding: 20px;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    position: relative;
+    text-align: center;
+}
+
+.question-holder::before {
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    border: 50px solid white;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    rotate: -45deg;
+    left: -50px;
+}
+
+.answers {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.answer {
+    padding: 20px;
+    background-color: white;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.answer::before {
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    border: 20px solid white;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    rotate: 135deg;
+    top: -20px;
+    right: -20px;
+}
+
+.success {
+    background-color: green;
+    color: white;
+}
+.success::before {
+    border-bottom-color: green !important;
+}
+.fail {
+    background-color: red;
+    color: white;
+}
+.fail::before {
+    border-bottom-color: red !important;
+}
